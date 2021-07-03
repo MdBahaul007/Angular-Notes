@@ -1,0 +1,185 @@
+ANGULAR TUTORIAL 
+
+--> To create new project use ng new project-name.
+--> then do ng serve
+
+
+TUTORIAL-3 
+
+File and folder structure.
+
+  i)Package.json file-> It shows pkg installed,other dependencies
+
+ ii).Node_models -> It also most of the dependencies.
+
+ ii). src-folder -> 95% of angular work is done here.
+  
+ iii). assests --> We can keep here public file like images,css,icons etc.
+
+ iv).Index.html file ->Application ki entry point.it is first file to load.
+
+ v). main.js -> It is JS file and it file which helps in intraction with index.html
+
+ vi). App folder -> It contain module and componenet.
+  -Module can have many component for ex user moudle can have component like userlogin,user signup,userprofile etc. are componenet in module.
+  -Component-> Component hs 4 file
+
+ vii) App-routing-module -> here we specigy jb loading hogi tau ye wla page khulega ya ye wla khulega an all.
+
+
+
+TUTOTRIAL -4
+HELLO WORLD IN ANGULAR
+
+--> In App>index.html Here we can chage the title.
+--> now jo local host 4200 pe content dikh rha hai wo iss index.html se aa rha hai aurmaterial jo aa rha wo app.componeent.html file se bhi aa rha hai.
+
+--> Go in app.component.html delete everything and
+we see everything will be gone on local host.
+do there <h1>Hello World.</h1>
+
+--> agr hm isi file pe {{title}} type ke 4200 pe apne project ka naam aa jaiga.
+ ye app.componenet.ts se aa rha hai.
+ ager wha pe title chage kr de tau chaged title dikne lge ga.
+y title 1 vraible ki trha hai agr iska name chage kre aur app.component.html {{changed-name}} likhe tau bhi aa jaiga jo bhi variable me stored hai.
+
+
+TUTORIAL 5
+INTERPOLATION.
+
+--> Khuch value hme component.ts file componenet.html file me leke jni hoti hai uske liye interpolation use krte hai.
+suppose compo.ts file me title ke just niche 
+name="mbm" diya aur hm ise compo.html file me access krna chte hai.
+tau bs hm compo.html me {{name}} type kregai double curly braces ke andr isi ko interpolation khete hai.
+
+function agr hme tranfer krna hai upr wle method se.
+function normal JS me likhte hai wase nhi likhe gai.
+
+asa likhe gai 
+getName(){
+return "mohd"
+}
+compo.html me jake {{getName()}}
+
+name="mbm" agr ye chiyai 
+getName(){
+return this.name; 
+}
+mbm aa jaiga
+
+object ke liye 
+in compo.ts
+user={
+name:"bahaul",
+age:20;
+}
+
+ab html file me
+
+{{user.name or age }}
+
+for arrry
+in .ts file
+arr=[1,2,3]
+
+in html file
+{{arr[0]}}
+
+supooose in ts file
+
+a=100
+b=20
+
+in html
+
+{{a+b}} -->o/p 200
+
+
+TUTORIAL 6
+COMPONENT
+
+--> cOMPO is peice of code made for ex sign in,login etc.
+--> We can use compo again and again jase header ka compo 1 br bna liy ause hm, br br use kr skte hai
+
+--> In angular compo has 4 file
+
+--> App compo is by default compo and is root compo.
+--> In app compo we have compo.ts file it has logical part all thing like api call, for-loop etc we do in this file.
+
+--> in compo.t file selector denortes compo name.
+and templeteURL denote html file loc.
+ 
+--> index.html pe body me jo <app-root></app-root> hota hai wo selector ka nam hota hai tau jo naam selector ka hai wo naam index.html me aaiga.
+
+-->CREATING COMPONENET.
+i) One is manaul by creating folder and then file.
+
+ii) In cmd line ng g c compo-name.
+
+To use new slector
+
+--> First of all iska slector kla name pta hona chiyai. so wo user-list.compo.ts  me mil jaiga.
+
+--> now in app.compo.html(by-default copo hai) me
+<app-user-list></app-user-list>
+o/p aa jaiga app-user-list is selector name.
+
+--> we cann go in user-list.copo.html and make chage supoose paragraph ki jghai heading tag de diya it will work.
+
+
+
+
+TUTORIAL 5
+MODULE
+
+IT IS basically collection of copo. copo will be like user-login, user-signup and so on.
+
+--by default mnodeule is app>app-module.ts
+
+-- Creating module using cmd-line
+ cmd--> ng g m users
+
+app ke andr 1 folder create ho jaiga usko.
+
+--> Now ab component bnte hai created module ke andr.
+ by defult to compo app folder me bmne ga apun ko user-module me bnana hai
+ tau cmd --> ng g c users(users is name of module)/login(login is compo nmae)
+
+--> Now to use this compo.
+--> hmko user.module.ts me jake module to phle bhr export krna pdega.
+import ke niche
+
+
+],     --ye khtm huwa hai
+exports:[
+copy name from in 3rdline {}
+]
+})->ye bracket by default hoge.
+
+
+--:> Ab hm y module app me use krna chate hai
+in app.compo,ts.
+import {UsersModule} from path ./users/uses.module.
+
+now below in file in app.module.ts
+imports me copy name from above {}  
+UsersModule -> no , rememeber
+]
+
+
+usermodule ka jo selector hoga usko app-copo.html me likhe gai.
+
+
+Ab agr nya copo bnaya tau hme import krne ki zarurt nhi hai phirse. cmd-> ng g c users/signup
+
+bs user.module.ts me jake
+
+jo nya compo hai use export krna pdega just copy name in {} from above and paste.
+
+
+
+
+
+
+ 
+    

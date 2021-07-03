@@ -1,0 +1,152 @@
+VIDEO 11
+PROPERTY BINDING.
+
+--> fIRST OF ALL take property in compo.ts file
+ for ex name="MBM".
+ now binding this name in compo.html file
+ so binding name inside input box
+  
+ in compo.html->
+ <input type="text [value]="name" />
+
+ now by default on browser mbm will be wriiten in input box.
+
+ if we use
+ <input type="text [value]={{name}} />
+ {{}}->interpolation
+ both are doing same work
+ so what is diff b/w binding & interpolation.
+ binding can handle disbale attribute but interpolation cnnot handle disbale attribute.
+
+
+VIDEO 12
+ANGULAR IF ELSE
+
+IN compo.ts
+
+show=true
+
+in compo.html
+
+
+<h1 *ngIf="show"> This heading will be visible </h1>
+
+if above we make show=false, the above3 heading will not be visible/
+
+suppose else condn come up
+
+first make id in if condn  i.e
+
+<h1 *ngIf="show else elseblock"> this menas that if if codn fails than else block should be visible
+
+<ng-template #elseblock>
+ <h1>now else block is visible</h1>
+</ngtemplate> 
+
+ng-templte is basically else.
+
+
+
+if we have string in compo.ts file
+
+show="yes"
+
+in compo.html
+
+<h1 *ngIf= "show=='yes' else elseBlock">If block visibel</h1>
+
+
+
+we can also do 
+<h1 *ngIf="show=="yes" then ifBLock else elseBlock>
+
+<ng-template #ifBlock>
+ <h1>now else block is visible</h1>
+</ngtemplate> 
+<ng-template #elseBlock>
+ <h1>now else block is visible</h1>
+</ngtemplate> 
+<--***-->
+
+
+
+else if condn
+
+
+show="red"
+
+.html file
+<ng-template [ngIf]="show=='red'">
+ <h1>Red</h1>
+</ngtemplate> 
+
+<ng-template [ngIf]="show=='green'">
+<h1>Red</h1>
+</ngtemplate> 
+
+<ng-template [ngIF]="show=='blue'>
+<h1>Green</h1>
+</ngtemplate> 
+
+
+
+VIDEO 13
+SWITCH IN ANGULAR
+SEE SCREENSHOT IN LAPTOP.
+
+
+VIDEO 14
+FOR-LOOP IN ANGULAR
+
+IN COMPO.TS
+
+arr=["MBM","HELO","WORLD"]
+
+IN COMPO.HTML
+
+<h4 *ngFor="let item of arr">
+{{item}}
+</h4>
+
+
+for object 
+
+in compo.ts
+
+data=[
+{
+ name:"MBM",
+ age:21	
+},
+{
+ name:"harry,
+ age:25
+} 
+]
+}
+
+in html file
+
+<h4 *ngFor="let item of data">
+{{item.name}}
+{{item.age}}
+
+
+to get o/p in tabular format
+
+<table border="2">
+
+<tr>
+<td>Name</td>
+<td>Age</td>
+</tr>
+
+<tr>
+<tr *ngFor="let item of data">
+	<td>{{item.name}}</td>
+	<td>{{item.name}}</td>
+</tr>
+
+</table>
+
+rest tutorial in copy

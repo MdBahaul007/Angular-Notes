@@ -1,0 +1,43 @@
+Tut-8
+Calling a function
+
+Suppose hm bnai hai clik on button pe function call ho tau doni chize same component me hone chiyai
+I have deleted all previous module and component/
+
+hm app module me kr rhe sb.
+
+in app.compo.ts me title ke niche fn bnya jaiga
+title="";
+getName(){
+alert('MBM');
+}
+}
+
+To call   go in app-copo.html
+<button (click)="getName()"> get-name </button>
+
+to pass name dynamically
+
+getName(name){
+alert(name);
+}
+}
+
+o call   go in app-copo.html
+<button>(click)="getName('BOB')" get-name </button>
+
+
+
+TUTORIAL-9
+EVENT IN ANGULAR
+
+(COPY ME SYNTX LIKHE HAI)
+
+
+
+TUTORIAL-10
+GET INPUT VALUE.
+
+SYTAX IN COPY.
+
+
